@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Inter, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+	overflow-x: hidden;
+}
+
+button{
+	cursor: pointer;
+}
+
+button:focus{
+	outline: 0;
+}
+
+.header{
+	padding: 1em;
+	background: #293264;
+	color: white;
+	font-size: 1.25em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.signin, .signout{
+	border: 2px solid white;
+	color: white;
+	background-color: transparent;
+	padding: 0.5em 1.5em;
+	font-size: 0.75em;
+	border-radius: 10px;
+}
+
+.signin:hover, .signout:hover{
+	color: #293264;
+	background-color: white;
+}
+
+.signin{
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding: 0.75em 1em;
+	font-size: 1rem;
+	display: flex;
+	align-items: center;
+}
+
+.signin > *{
+	margin-right: 0.5em;
+	font-size: 2em;
+}
+
+.main{
+	padding: 1em;
+	background-color: #152238;
+	min-height: 85.4vh;
+}
+
+.messages{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+}
+
+.message{
+	display: flex;
+	align-items: center;
+}	
+
+.msg{
+	padding: 0.75em 1em;
+	background-color: #23395d;
+	color: white;
+	margin: 1em 1em;
+	border-radius: 1.5em;
+	max-width: 60vw;
+	word-break: break-all;
+}
+
+.chat-room{
+	display: flex;
+	flex-direction: column;
+	min-height: 88.5vh;
+}
+
+.send-msg{
+	margin-top: auto;
+	display: flex;
+	font-size: 2rem;
+	bottom: 0;
+	left: 0;
+	align-items: center;
+	align-self: center;
+}
+
+.sentFromMe{
+	flex-direction: row-reverse;
+	align-self: flex-end;
+}
+
+.sentFromMe .msg{
+	background-color: #25d366;
+	text-align: right;
+}
+
+.msg-text{
+	height: 3rem;
+	width: 90%;
+	text-indent: 10px;
+	font-size: 1.25rem;
+}
+
+.msg-text:focus{
+	outline: 1px solid #009dff;
+}
+
+.send-btn{
+	height: calc(3rem + 4px);
+	width: calc(3rem + 3px);
+	color: white;
+	border: 0;
+	background-color: #009dff;
+}
+
+.avatar{
+	height: 50px;
+	border-radius: 50%;
 }
